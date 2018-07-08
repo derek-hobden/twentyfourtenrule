@@ -10,8 +10,10 @@
 
 <h2>What's your limit?</h2>
 <div>
-  <label for="monthlySalary">What's you monthly salary? </label>
-  <input type="number" id="monthlySalary" (change)="onSalaryKeyup($event)">
+  <!--<label for="monthlySalary">What's you monthly salary? </label>-->
+  <mat-form-field>
+    <input matInput="" placeholder="What's you monthly salary?" id="monthlySalary" (change)="onSalaryKeyup($event)">
+  </mat-form-field>
   <br>
   <br>
   <div>Your car cost limit is <strong>{{limit}}</strong></div>
@@ -21,28 +23,33 @@
 
 <h2>What will the expenses be?</h2>
 <div>
-  <label for="monthlyPayments">Monthly Payments? </label>
-  <input type="number" id="monthlyPayments" (change)="onMonthlyPaymentKeyup($event)">
+  <mat-form-field>
+    <input matInput placeholder="Monthly Payments?" id="monthlyPayments" (change)="onMonthlyPaymentKeyup($event)">
+  </mat-form-field>
 </div>
 
 <div>
-  <label for="monthlyPetrol">Monthly Petrol? </label>
-  <input type="number" id="monthlyPetrol" (change)="onMonthlyPetrolKeyup($event)">
+  <mat-form-field>
+  <input matInput placeholder="Monthly Petrol?" type="number" id="monthlyPetrol" (change)="onMonthlyPetrolKeyup($event)">
+  </mat-form-field>
 </div>
 
 <div>
-  <label for="monthlyTollFees">Monthly Tolls? </label>
-  <input type="number" id="monthlyTollFees" (change)="onMonthlyTollFeesKeyup($event)">
+  <mat-form-field>
+  <input matInput placeholder="Monthly Toll Fees?" type="number" id="monthlyTollFees" (change)="onMonthlyTollFeesKeyup($event)">
+  </mat-form-field>
 </div>
 
 <div>
-  <label for="annualServices">Annual Services? </label>
-  <input type="number" id="annualServices" (change)="onAnnualServicesKeyup($event)">
+  <mat-form-field>
+  <input matInput placeholder="Annual Servicing Costs?" type="number" id="annualServices" (change)="onAnnualServicesKeyup($event)">
+  </mat-form-field>
 </div>
 
 <div>
-  <label for="annualInsurance">Annual Insurance? </label>
-  <input type="number" id="annualInsurance" (change)="onAnnualInsuranceKeyup($event)">
+  <mat-form-field>
+  <input matInput placeholder="Annual Insurance?" type="number" id="annualInsurance" (change)="onAnnualInsuranceKeyup($event)">
+  </mat-form-field>
 </div>
 
 <br>
