@@ -12,7 +12,7 @@
 <div>
   <!--<label for="monthlySalary">What's you monthly salary? </label>-->
   <mat-form-field>
-    <input matInput="" placeholder="What's you monthly salary?" id="monthlySalary" (change)="onSalaryKeyup($event)">
+    <input matInput="" placeholder="What's you monthly salary?" type="number" id="monthlySalary" (change)="onSalaryKeyup($event)">
   </mat-form-field>
   <br>
   <br>
@@ -24,7 +24,7 @@
 <h2>What will the expenses be?</h2>
 <div>
   <mat-form-field>
-    <input matInput placeholder="Monthly Payments?" id="monthlyPayments" (change)="onMonthlyPaymentKeyup($event)">
+    <input matInput placeholder="Monthly Payments?" type="number" id="monthlyPayments" (change)="onMonthlyPaymentKeyup($event)">
   </mat-form-field>
 </div>
 
