@@ -1,65 +1,90 @@
-<h1>The Twenty-Four-Ten Rule</h1>
-<h2>What is it?</h2>
-<p>Be smart when deciding how much to spend on a car. Follow this rule:</p>
-<ul>
-  <li>Twenty - Put down 20% deposit, at least.</li>
-  <li>Four - Finance the car up to 4 years, but no more.</li>
-  <li>Ten - The remaining costs should not exceed 10% of your salary.</li>
-</ul>
-<p>If you have to break ANY of these rules, you cannot afford the car.</p>
+<div class="container">
+  <!-- Content here -->
 
-<h2>What's your limit?</h2>
-<div>
-  <!--<label for="monthlySalary">What's you monthly salary? </label>-->
-  <mat-form-field>
-    <input matInput="" placeholder="What's you monthly salary?" type="number" id="monthlySalary" (change)="onSalaryKeyup($event)">
-  </mat-form-field>
-  <br>
-  <br>
-  <div>Your car cost limit is <strong>{{limit}}</strong></div>
+  <!--Card-->
+  <div class="card card-cascade wider reverse my-4">
+
+    <!--Card image-->
+    <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+      <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" class="img-fluid">
+      <a>
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
+    <!--/Card image-->
+
+    <!--Card content-->
+    <div class="card-body card-body-cascade text-center">
+      <h1>The Twenty-Four-Ten Rule</h1>
+      <h2>What is it?</h2>
+      <p>Be smart when deciding how much to spend on a car. Follow this rule:</p>
+      <ul class="list-group">
+        <li class="list-group-item">Twenty - Put down 20% deposit, at least.</li>
+        <li class="list-group-item">Four - Finance the car up to 4 years, but no more.</li>
+        <li class="list-group-item">Ten - The remaining costs should not exceed 10% of your salary.</li>
+      </ul>
+      <br>
+      <p>If you have to break ANY of these rules, you cannot afford the car.</p>
+
+      <h2>What's your limit?</h2>
+      <div>
+        <!--<label for="monthlySalary">What's you monthly salary? </label>-->
+        <mat-form-field>
+          <input matInput="" placeholder="What's you monthly salary?" type="number" id="monthlySalary" (change)="onSalaryKeyup($event)">
+        </mat-form-field>
+        <br>
+        <br>
+        <div>Your car cost limit is <strong>{{limit}}</strong></div>
+      </div>
+
+      <br/>
+
+      <h2>What will the expenses be?</h2>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Monthly Payments?" type="number" id="monthlyPayments" (change)="onMonthlyPaymentKeyup($event)">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Monthly Petrol?" type="number" id="monthlyPetrol" (change)="onMonthlyPetrolKeyup($event)">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Monthly Toll Fees?" type="number" id="monthlyTollFees" (change)="onMonthlyTollFeesKeyup($event)">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Annual Servicing Costs?" type="number" id="annualServices" (change)="onAnnualServicesKeyup($event)">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Annual Insurance?" type="number" id="annualInsurance" (change)="onAnnualInsuranceKeyup($event)">
+        </mat-form-field>
+      </div>
+
+      <br>
+
+      <div>
+        <label for="total">Total </label><strong id="total"> {{totalMonthlyFees}}</strong>
+      </div>
+
+      <h2>And what's the verdict? </h2>
+
+      <p *ngIf="totalMonthlyFees <= limit">This is a financially smart decision.</p>
+      <p *ngIf="totalMonthlyFees > limit">This may not be the smartest purchase.</p>
+
+    </div>
+    <!--/.Card content-->
+
+  </div>
+  <!--/.Card-->
+
 </div>
-
-<br/>
-
-<h2>What will the expenses be?</h2>
-<div>
-  <mat-form-field>
-    <input matInput placeholder="Monthly Payments?" type="number" id="monthlyPayments" (change)="onMonthlyPaymentKeyup($event)">
-  </mat-form-field>
-</div>
-
-<div>
-  <mat-form-field>
-  <input matInput placeholder="Monthly Petrol?" type="number" id="monthlyPetrol" (change)="onMonthlyPetrolKeyup($event)">
-  </mat-form-field>
-</div>
-
-<div>
-  <mat-form-field>
-  <input matInput placeholder="Monthly Toll Fees?" type="number" id="monthlyTollFees" (change)="onMonthlyTollFeesKeyup($event)">
-  </mat-form-field>
-</div>
-
-<div>
-  <mat-form-field>
-  <input matInput placeholder="Annual Servicing Costs?" type="number" id="annualServices" (change)="onAnnualServicesKeyup($event)">
-  </mat-form-field>
-</div>
-
-<div>
-  <mat-form-field>
-  <input matInput placeholder="Annual Insurance?" type="number" id="annualInsurance" (change)="onAnnualInsuranceKeyup($event)">
-  </mat-form-field>
-</div>
-
-<br>
-
-<div>
-  <label for="total">Total </label>
-  <strong id="total">{{totalMonthlyFees}}</strong>
-</div>
-
-<h2>And what's the verdict? </h2>
-
-<p *ngIf="totalMonthlyFees <= limit">This is a financially smart decision.</p>
-<p *ngIf="totalMonthlyFees > limit">This may not be the smartest purchase.</p>
